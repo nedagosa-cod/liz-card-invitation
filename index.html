@@ -17,36 +17,52 @@
     <title>Nos Casamos!</title>
 </head>
 <body>
-    <header class="header">
-        <h1>Hola</h1>
-        <figure class="main__adorno anim">
-            <img src="./src/assets/img/adorno_a.png" alt="adorno">
-        </figure>
-        <figure class="logo">
-            <img src="./src/assets/img/titulo.png" alt="nombres">
-        </figure>
-    </header>
-    <main class="main">
-        <h1 class="titulo anim">¡Nos Casamos!</h1>
-        <p class="subtitulo fade">Después de 11 años caminando juntos hemos decidido unir nuestras vidas en matrimonio, por lo que nos complace que sean participes de esta unión</p>
-        <model-viewer src="./src/assets/models/classic_golden_wedding_rings.glb" camera-controls camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad)" src="../../shared-assets/models/Astronaut.glb" disable-zoom></model-viewer>
-        <figure class="myhr">
-            <img src="./src/assets/img/hr.png" alt="hr">
-        </figure>
-        <h1 class="titulo">Ceremonia</h1>
-        <p class="subtitulo">Es pronto! estamos felices de que puedas asistir!</p>
-        <div class="box-counter">
-            <p id="box-counter__dia" class="main__counter"></p>
-            <p id="box-counter__hora" class="main__counter"></p>
-            <p id="box-counter__min" class="main__counter"></p>
-            <p id="box-counter__seg" class="main__counter"></p>
-        </div>
-        <figure class="myhr">
-            <img src="./src/assets/img/hr.png" alt="hr">
-        </figure>
-    </main>
-    <section class="calendar">
-
-    </section>
+    <div class="leaf-box">
+        <div class="leaf"></div>
+        <div class="leaf l"></div>
+        <div class="leaf"></div>
+        <div class="leaf l"></div>
+        <div class="leaf"></div>
+        <div class="leaf l"></div>
+        <div class="leaf"></div>
+        <div class="leaf l"></div>
+        <div class="leaf"></div>
+        <div class="leaf l"></div>
+        <div class="leaf"></div>
+        <div class="leaf l"></div>
+    </div>
+    <div class="root">
+        <header class="header">
+            <h1>Hola</h1>
+            <figure class="main__adorno anim">
+                <img src="./src/assets/img/adorno_a.png" alt="adorno">
+            </figure>
+            <figure class="logo">
+                <img src="./src/assets/img/titulo.png" alt="nombres">
+            </figure>
+        </header>
+        <main class="main">
+            <h1 class="titulo anim">¡Nos Casamos!</h1>
+            <p class="subtitulo fade">Después de 11 años caminando juntos hemos decidido unir nuestras vidas en matrimonio, por lo que nos complace que sean participes de esta unión</p>
+            <model-viewer src="./src/assets/models/classic_golden_wedding_rings.glb" camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad)" src="../../shared-assets/models/Astronaut.glb" disable-zoom></model-viewer>
+            <figure class="myhr">
+                <img src="./src/assets/img/hr.png" alt="hr">
+            </figure>
+            <h1 class="titulo">Ceremonia</h1>
+            <p class="subtitulo">Es pronto! estamos felices de que puedas asistir!</p>
+            <div class="box-counter">
+                <p id="box-counter__dia" class="main__counter"></p>
+                <p id="box-counter__hora" class="main__counter"></p>
+                <p id="box-counter__min" class="main__counter"></p>
+                <p id="box-counter__seg" class="main__counter"></p>
+            </div>
+            <figure class="myhr">
+                <img src="./src/assets/img/hr.png" alt="hr">
+            </figure>
+        </main>
+        <section class="calendar">
+    
+        </section>
+    </div>
 </body>
 </html>

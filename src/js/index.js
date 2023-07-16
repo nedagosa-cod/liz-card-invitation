@@ -44,9 +44,8 @@ gsap.timeline({
     // markers: true
     }
 })
-.fromTo('.main__adorno', {opacity: .5, top: '100%', position: 'relative'},
+.fromTo('.main__adorno', {top: '100%', position: 'relative'},
 { 
-    opacity:1,
     y:'-95%',
     duration: 0.3,
 })
@@ -93,7 +92,7 @@ gsap.timeline({
 
 
 // Set the date we're counting down to
-var countDownDate = new Date("Sep 27, 2023 20:00:00").getTime();
+var countDownDate = new Date("Sep 27, 2023 16:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
