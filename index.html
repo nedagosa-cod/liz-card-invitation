@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles/css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+
+    <script src="./src/js/index.js" defer></script>
+    <title>Nos Casamos!</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Hola</h1>
+        <figure class="main__adorno anim">
+            <img src="./src/assets/img/adorno_a.png" alt="adorno">
+        </figure>
+        <figure class="logo">
+            <img src="./src/assets/img/titulo.png" alt="nombres">
+        </figure>
+    </header>
+    <main class="main">
+        <h1 class="titulo anim">¡Nos Casamos!</h1>
+        <p class="subtitulo fade">Después de 11 años caminando juntos hemos decidido unir nuestras vidas en matrimonio, por lo que nos complace que sean participes de esta unión</p>
+        <model-viewer src="./src/assets/models/classic_golden_wedding_rings.glb" camera-controls camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad)" src="../../shared-assets/models/Astronaut.glb" disable-zoom></model-viewer>
+        <figure class="myhr">
+            <img src="./src/assets/img/hr.png" alt="hr">
+        </figure>
+        <h1 class="titulo">Ceremonia</h1>
+        <p class="subtitulo">Es pronto! estamos felices de que puedas asistir!</p>
+        <div class="box-counter">
+            <p id="box-counter__dia" class="main__counter"></p>
+            <p id="box-counter__hora" class="main__counter"></p>
+            <p id="box-counter__min" class="main__counter"></p>
+            <p id="box-counter__seg" class="main__counter"></p>
+        </div>
+        <figure class="myhr">
+            <img src="./src/assets/img/hr.png" alt="hr">
+        </figure>
+    </main>
+    <section class="calendar">
+
+    </section>
+</body>
+</html>
