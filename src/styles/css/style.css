@@ -325,6 +325,7 @@ svg {
 .main {
   width: 100%;
   position: relative;
+  border: 2px solid white;
 }
 .main .myhr {
   width: 30%;
@@ -384,23 +385,83 @@ svg {
   width: 20%;
 }
 
-.calendar {
+.iglesia {
   width: 100%;
   height: 100vh;
-  background-image: url("../../assets/img/backsec.png");
-  background-size: cover;
-  background-repeat: no-repeat;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.calendar::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.iglesia__content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 800px;
+  height: 600px;
+  border: 1px solid rgba(0, 0, 0, 0.349);
+}
+.iglesia__content .bx-top {
+  display: flex;
+  gap: 10px;
   width: 100%;
-  height: 160px;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(0deg, rgba(2, 0, 36, 0) 0%, rgb(255, 255, 255) 100%);
+  height: 70%;
+  font-size: 6rem;
+  background: #d4a3bd;
+}
+.iglesia__content .bx-top__a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+}
+.iglesia__content .bx-top__a figure {
+  width: 90%;
+}
+.iglesia__content .bx-top__b {
+  width: 30%;
+  height: 100%;
+}
+.iglesia__content .bx-top__b div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+.iglesia__content .bx-top__b div figure {
+  width: 90%;
+}
+.iglesia__content .bx-bot {
+  width: 100%;
+  height: 30%;
+  background: red;
+}
+.iglesia .div {
+  position: absolute;
+}
+.iglesia .div:nth-child(1) {
+  top: 0;
+  right: 0;
+}
+.iglesia .div:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+.iglesia .div .capa_1 {
+  width: 600px;
+  margin: 20px;
+}
+.iglesia .div .capa_1 path {
+  fill: #faa972;
+}
+.iglesia .div .capa_3 {
+  width: 600px;
+  margin: 20px;
+}
+.iglesia .div .capa_3 path {
+  fill: #ff7417;
 }
 
 @media only screen and (max-width: 600px) {
@@ -481,6 +542,89 @@ svg {
   }
   .main .protocolo .flecha {
     transform: rotate(90deg) scale(0.5);
+  }
+  .iglesia {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .iglesia__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 800px;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.349);
+  }
+  .iglesia__content .bx-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 70%;
+    height: auto;
+    font-size: 6rem;
+    background: #d4a3bd;
+  }
+  .iglesia__content .bx-top__a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+  }
+  .iglesia__content .bx-top__a figure {
+    width: 90%;
+    margin: 10px;
+  }
+  .iglesia__content .bx-top__b {
+    width: 30%;
+    height: 100%;
+  }
+  .iglesia__content .bx-top__b div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+  }
+  .iglesia__content .bx-top__b div figure {
+    width: 90%;
+    margin: 10px;
+  }
+  .iglesia__content .bx-bot {
+    width: 100%;
+    height: 30%;
+    background: red;
+  }
+  .iglesia .div {
+    position: absolute;
+  }
+  .iglesia .div:nth-child(1) {
+    top: 0;
+    right: 0;
+  }
+  .iglesia .div:nth-child(3) {
+    bottom: 0;
+    left: 0;
+  }
+  .iglesia .div .capa_1 {
+    width: 300px;
+    margin: 10px;
+  }
+  .iglesia .div .capa_1 path {
+    fill: #faa972;
+  }
+  .iglesia .div .capa_3 {
+    width: 350px;
+    margin: 10px;
+  }
+  .iglesia .div .capa_3 path {
+    fill: #ff7417;
   }
 }
 
