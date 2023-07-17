@@ -367,6 +367,18 @@ svg {
   font-size: 4rem;
   margin: 8px auto;
 }
+.main .protocolo {
+  width: 100%;
+  padding: 60px 10%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fcd9c2;
+}
+.main .protocolo .flecha {
+  margin: 0 10px;
+}
 .main model-viewer {
   margin: auto;
   width: 20%;
@@ -378,6 +390,17 @@ svg {
   background-image: url("../../assets/img/backsec.png");
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+}
+.calendar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(0deg, rgba(2, 0, 36, 0) 0%, rgb(255, 255, 255) 100%);
 }
 
 @media only screen and (max-width: 600px) {
@@ -404,11 +427,9 @@ svg {
   }
   .main .myhr {
     width: 80%;
-    margin: 40px auto 0 auto;
   }
   .main .titulo {
     font-size: 5rem;
-    margin-top: 80px;
   }
   .main .subtitulo {
     font-family: "Rancho", cursive;
@@ -438,6 +459,16 @@ svg {
   .main .box-counter p span {
     font-size: 2rem;
     margin: 8px auto;
+  }
+  .main .protocolo {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .main .protocolo figure {
+    width: 40%;
+  }
+  .main .protocolo .flecha {
+    transform: rotate(90deg) scale(0.5);
   }
 }
 

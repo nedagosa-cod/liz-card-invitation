@@ -128,7 +128,7 @@ AOS.init();
 const tl = gsap.timeline()
 
 tl.to('.header__adorno', {
-    y: '-99%',
+    y: '-98%',
     duration: 1,
     scrollTrigger: {
         trigger: '.main',
@@ -139,6 +139,15 @@ tl.to('.header__adorno', {
     }
 })
 
+gsap.to('.logo',{y: -40},{
+    y: 0,
+    duration: 8,
+    delay: 4,
+    scrollTrigger: {
+        trigger: '.header',
+        scrub: 4
+    }
+})
 tl.to('.logo', {
     y: '-20%',
     scale: .5,
