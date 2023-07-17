@@ -134,7 +134,7 @@ tl.to('.header__adorno', {
         trigger: '.main',
         start: 'top 95%',
         end: 'top 80%',
-        markers: true,
+        // markers: true,
         scrub: 1
     }
 })
@@ -156,7 +156,7 @@ tl.to('.logo', {
         trigger: '.main',
         start: 'top 95%',
         end: 'top 80%',
-        markers: true,
+        // markers: true,
         scrub: 1
     }
 })
