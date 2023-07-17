@@ -138,3 +138,16 @@ tl.to('.header__adorno', {
         scrub: 1
     }
 })
+
+tl.to('.logo', {
+    y: '-20%',
+    scale: .5,
+    duration: 1,
+    scrollTrigger: {
+        trigger: '.main',
+        start: 'top 95%',
+        end: 'top 80%',
+        markers: true,
+        scrub: 1
+    }
+})
