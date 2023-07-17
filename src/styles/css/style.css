@@ -445,6 +445,7 @@ svg {
   .main .box-counter {
     width: 100%;
     margin: auto;
+    overflow: hidden;
   }
   .main .box-counter p {
     font-size: 6rem;
