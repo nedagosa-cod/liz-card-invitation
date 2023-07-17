@@ -418,12 +418,17 @@ svg {
   }
   .header {
     width: 100vw;
+    background-image: url("../../assets/img/header_mobile.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .header .logo {
     position: absolute;
     top: 30%;
     width: 95%;
     margin: auto;
+    filter: drop-shadow(0 2px 2px rgba(8, 5, 0, 0.952));
   }
   .header .button {
     display: block;
