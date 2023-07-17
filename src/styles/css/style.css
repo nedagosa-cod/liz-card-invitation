@@ -399,7 +399,6 @@ svg {
   flex-wrap: wrap;
   width: 800px;
   height: 600px;
-  border: 1px solid rgba(0, 0, 0, 0.349);
 }
 .iglesia__content .bx-top {
   display: flex;
@@ -407,7 +406,7 @@ svg {
   width: 100%;
   height: 70%;
   font-size: 6rem;
-  background: #d4a3bd;
+  background: #ffe5f3;
 }
 .iglesia__content .bx-top__a {
   display: flex;
@@ -436,7 +435,7 @@ svg {
 .iglesia__content .bx-bot {
   width: 100%;
   height: 30%;
-  background: red;
+  background: rgb(154, 214, 241);
 }
 .iglesia .div {
   position: absolute;
@@ -569,7 +568,7 @@ svg {
     width: 70%;
     height: auto;
     font-size: 6rem;
-    background: #d4a3bd;
+    background: #ffe5f3;
   }
   .iglesia__content .bx-top__a {
     display: flex;
@@ -583,8 +582,8 @@ svg {
     margin: 10px;
   }
   .iglesia__content .bx-top__b {
-    width: 30%;
-    height: 100%;
+    width: 70%;
+    height: auto;
   }
   .iglesia__content .bx-top__b div {
     display: flex;
@@ -597,10 +596,16 @@ svg {
     width: 90%;
     margin: 10px;
   }
+  .iglesia__content .bx-top__b .map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+  }
   .iglesia__content .bx-bot {
     width: 100%;
     height: 30%;
-    background: red;
+    background: rgb(136, 191, 216);
   }
   .iglesia .div {
     position: absolute;
