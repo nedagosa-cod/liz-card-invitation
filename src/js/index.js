@@ -78,7 +78,7 @@ gsap.timeline({
 })
 .fromTo('.logo', {scale: 1, yPercent: 0},
 { 
-    scale:.5,
+    scale:.8,
     yPercent: -40,
     duration: 0.3,
 })
