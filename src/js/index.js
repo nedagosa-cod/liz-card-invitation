@@ -34,54 +34,54 @@ gsap.registerPlugin(ScrollTrigger);
 // })
 
 
-gsap.timeline({
-    scrollTrigger: {
-    trigger: '.main__adorno',
-    scroller: 'body',
-    start: "top 100%",
-    end: "top 65%",
-    scrub: 1,
-    // markers: true
-    }
-})
-.fromTo('.main__adorno', {top: '100%', position: 'relative'},
-{ 
-    y:'-95%',
-    duration: 0.3,
-})
+// gsap.timeline({
+//     scrollTrigger: {
+//     trigger: '.main__adorno',
+//     scroller: 'body',
+//     start: "top 100%",
+//     end: "top 65%",
+//     scrub: 1,
+//     // markers: true
+//     }
+// })
+// .fromTo('.main__adorno', {top: '100%', position: 'relative'},
+// { 
+//     y:'-95%',
+//     duration: 0.3,
+// })
 
-gsap.timeline({
-    scrollTrigger: {
-    trigger: '.titulo',
-    scroller: 'body',
-    start: "top 120%",
-    end: "top 80%",
-    scrub: 1,
-    }
-})
-.fromTo('.main', {opacity: 0, y: 150},
-{ 
-    opacity:1,
-    y:'-10%',
-    duration: 0.3,
-})
+// gsap.timeline({
+//     scrollTrigger: {
+//     trigger: '.titulo',
+//     scroller: 'body',
+//     start: "top 120%",
+//     end: "top 80%",
+//     scrub: 1,
+//     }
+// })
+// .fromTo('.main', {opacity: 0, y: 150},
+// { 
+//     opacity:1,
+//     y:'-5%',
+//     duration: 0.3,
+// })
 
-gsap.timeline({
-    scrollTrigger: {
-    trigger: '.logo',
-    scroller: 'body',
-    start: "100% 75%",
-    end: "100% 40%",
-    scrub: 1,
-    markers: true
-    }
-})
-.fromTo('.logo', {scale: 1, yPercent: 0},
-{ 
-    scale:.8,
-    yPercent: -40,
-    duration: 0.3,
-})
+// gsap.timeline({
+//     scrollTrigger: {
+//     trigger: '.logo',
+//     scroller: 'body',
+//     start: "100% 75%",
+//     end: "100% 40%",
+//     scrub: 1,
+//     markers: true
+//     }
+// })
+// .fromTo('.logo', {scale: 1, yPercent: 0},
+// { 
+//     scale:.8,
+//     yPercent: -40,
+//     duration: 0.3,
+// })
 
 
 // const elements = document.querySelectorAll(".anim");
@@ -121,3 +121,20 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+
+AOS.init();
+
+const tl = gsap.timeline()
+
+tl.to('.header__adorno', {
+    y: '-99%',
+    duration: 1,
+    scrollTrigger: {
+        trigger: '.main',
+        start: 'top 95%',
+        end: 'top 80%',
+        markers: true,
+        scrub: 1
+    }
+})

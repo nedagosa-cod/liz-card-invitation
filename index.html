@@ -12,6 +12,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
 
     <script src="./src/js/index.js" defer></script>
     <title>Nos Casamos!</title>
@@ -37,13 +41,13 @@
                 <img src="./src/assets/img/titulo.png" alt="nombres">
             </figure>
             <span class="button">Invitacion Especial</span>
-            <figure class="main__adorno anim">
+            <figure class="header__adorno">
                 <img src="./src/assets/img/adorno_a.png" alt="adorno">
             </figure>
         </header>
         <main class="main">
-            <h1 class="titulo anim">¡Nos Casamos!</h1>
-            <p class="subtitulo fade">Después de 11 años caminando juntos hemos decidido unir nuestras vidas en matrimonio, por lo que nos complace que sean participes de esta unión</p>
+            <h1 class="titulo">¡Nos Casamos!</h1>
+            <p class="subtitulo">Después de 11 años caminando juntos hemos decidido unir nuestras vidas en matrimonio, por lo que nos complace que sean participes de esta unión</p>
             <model-viewer src="./src/assets/models/classic_golden_wedding_rings.glb" camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad)" src="../../shared-assets/models/Astronaut.glb" disable-zoom></model-viewer>
             <figure class="myhr">
                 <img src="./src/assets/img/hr.png" alt="hr">
@@ -51,10 +55,10 @@
             <h1 class="titulo">Ceremonia</h1>
             <p class="subtitulo">Es pronto! estamos felices de que puedas asistir!</p>
             <div class="box-counter">
-                <p id="box-counter__dia" class="main__counter"></p>
-                <p id="box-counter__hora" class="main__counter"></p>
-                <p id="box-counter__min" class="main__counter"></p>
-                <p id="box-counter__seg" class="main__counter"></p>
+                <p id="box-counter__dia" class="main__counter" data-aos="fade-up-right" data-aos-delay="300"></p>
+                <p id="box-counter__hora" class="main__counter" data-aos="fade-up-right" data-aos-delay="600"></p>
+                <p id="box-counter__min" class="main__counter" data-aos="fade-up-left" data-aos-delay="400"></p>
+                <p id="box-counter__seg" class="main__counter" data-aos="fade-up-left" data-aos-delay="700"></p>
             </div>
             <figure class="myhr">
                 <img src="./src/assets/img/hr.png" alt="hr">
