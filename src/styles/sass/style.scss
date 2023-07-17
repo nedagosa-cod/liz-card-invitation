@@ -406,6 +406,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
         &__content {
             display: flex;
             flex-direction: column;
