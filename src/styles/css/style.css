@@ -277,7 +277,6 @@ svg {
   align-items: center;
   width: 100%;
   height: 100vh;
-  height: 100dvh;
   background-image: url("../../assets/img/header.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -409,13 +408,16 @@ svg {
     display: none;
   }
   .root {
-    width: 100%;
+    width: 100vw;
     margin: 0 auto;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     position: relative;
     border: none;
+  }
+  .header {
+    width: 100vw;
   }
   .header .logo {
     position: absolute;
