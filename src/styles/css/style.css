@@ -428,6 +428,9 @@ svg {
   .header .button {
     display: block;
   }
+  .main {
+    overflow: hidden;
+  }
   .main .myhr {
     width: 80%;
   }
