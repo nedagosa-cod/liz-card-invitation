@@ -394,6 +394,8 @@ svg {
   align-items: center;
 }
 .iglesia__content {
+  border: 3px dashed #f596c8;
+  box-shadow: 0 0 0 12px rgba(218, 117, 238, 0.349);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -401,41 +403,94 @@ svg {
   height: 600px;
 }
 .iglesia__content .bx-top {
+  position: relative;
   display: flex;
-  gap: 10px;
+  gap: 24px;
   width: 100%;
   height: 70%;
+  padding: 24px;
   font-size: 6rem;
   background: #ffe5f3;
+  -webkit-box-shadow: 0px 10px 0px 0px rgba(0, 57, 59, 0.75);
+  -moz-box-shadow: 0px 10px 0px 0px rgba(0, 57, 59, 0.75);
+  box-shadow: 0px 10px 0px 0px rgba(0, 57, 59, 0.75);
 }
 .iglesia__content .bx-top__a {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  font-size: 3.6rem;
+  text-align: center;
+  overflow: hidden;
   width: 70%;
   height: 100%;
+  border: 1px dashed #f596c8;
+  padding: 8px;
+}
+.iglesia__content .bx-top__a h1 {
+  margin: 6px auto;
 }
 .iglesia__content .bx-top__a figure {
-  width: 90%;
+  width: 86%;
+  margin: auto;
+  border: 3px outset #96eff5;
 }
 .iglesia__content .bx-top__b {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   width: 30%;
   height: 100%;
 }
 .iglesia__content .bx-top__b div {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  font-size: 2rem;
   width: 100%;
-  height: 50%;
 }
-.iglesia__content .bx-top__b div figure {
-  width: 90%;
+.iglesia__content .bx-top__b div:nth-child(1) {
+  height: 30%;
+}
+.iglesia__content .bx-top__b div:nth-child(2) {
+  height: 70%;
+}
+.iglesia__content .bx-top__b div:nth-child(2) a {
+  font-family: "Rancho", cursive;
+  margin: 6px auto;
+  background: #f5eab0;
+  padding: 4px 12px;
+}
+.iglesia__content .bx-top__b div:nth-child(2) a:hover {
+  background: #fad72b;
+}
+.iglesia__content .bx-top__b div:nth-child(2) iframe {
+  height: 100%;
 }
 .iglesia__content .bx-bot {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   width: 100%;
   height: 30%;
   background: rgb(154, 214, 241);
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Rancho", cursive;
+}
+.iglesia__content .bx-bot hr {
+  width: 50%;
+  margin: 4px auto;
+}
+.iglesia__content .bx-bot h1 {
+  font-size: 3.4rem;
+  margin: 4px auto;
+}
+.iglesia__content .bx-bot h3 {
+  font-size: 2.6rem;
+}
+.iglesia__content .bx-bot p {
+  font-size: 2.2rem;
 }
 .iglesia .div {
   position: absolute;
@@ -556,16 +611,18 @@ svg {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    width: 800px;
+    width: 95%;
+    margin: 4px auto;
     height: auto;
-    border: 1px solid rgba(0, 0, 0, 0.349);
+    border: 3px dashed #f596c8;
+    box-shadow: 0 0 0 12px rgba(218, 117, 238, 0.349);
   }
   .iglesia__content .bx-top {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    width: 70%;
+    width: 100%;
     height: auto;
     font-size: 6rem;
     background: #ffe5f3;
@@ -574,7 +631,7 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 100%;
     height: 100%;
   }
   .iglesia__content .bx-top__a figure {
@@ -596,11 +653,8 @@ svg {
     width: 90%;
     margin: 10px;
   }
-  .iglesia__content .bx-top__b .map {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: red;
+  .iglesia__content .bx-top__b div iframe {
+    width: 90%;
   }
   .iglesia__content .bx-bot {
     width: 100%;
@@ -608,7 +662,10 @@ svg {
     background: rgb(136, 191, 216);
   }
   .iglesia .div {
-    position: absolute;
+    position: relative;
+  }
+  .iglesia .div.hide {
+    display: none;
   }
   .iglesia .div:nth-child(1) {
     top: 0;
