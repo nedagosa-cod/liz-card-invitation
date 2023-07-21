@@ -299,7 +299,7 @@
                     font-size: 2rem;
                     width: 100%;
                     &:nth-child(1){
-                        height: 30%;
+
                     }
                     &:nth-child(2){
                         height: auto;
@@ -307,16 +307,15 @@
                             font-family: $tipo-secundaria;
                             margin: 0 auto 18px auto;
                             background: #f5eab0;
-                            padding: 20px 40px;
+                            padding: 8px 12px;
                             width: 90%;
                             text-align: center;
-                            font-size: 3rem;
                             &:hover {
                                 background: #fad72b;
                             }
                         }
                         iframe {
-                            height: 280px;
+                            height: auto;
                         }
                     }
 
@@ -326,7 +325,7 @@
         .bx-bot {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: center;
             width: 100%;
             height: 30%;
             background: rgb(154, 214, 241);
@@ -516,6 +515,7 @@
                 width: 100%;
                 height: 30%;
                 background: rgb(136, 191, 216);
+                padding: 14px 0;
             }
         }
         .div {
