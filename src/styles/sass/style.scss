@@ -302,18 +302,21 @@
                         height: 30%;
                     }
                     &:nth-child(2){
-                        height: 70%;
+                        height: auto;
                         a {
                             font-family: $tipo-secundaria;
-                            margin: 6px auto;
+                            margin: 0 auto 18px auto;
                             background: #f5eab0;
-                            padding: 4px 12px;
+                            padding: 20px 40px;
+                            width: 90%;
+                            text-align: center;
+                            font-size: 3rem;
                             &:hover {
                                 background: #fad72b;
                             }
                         }
                         iframe {
-                            height: 100%;
+                            height: 280px;
                         }
                     }
 
@@ -459,20 +462,17 @@
         width: 100%;
         height: 100vh;
         position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
+        display: block;
         &__content {
             display: flex;
             flex-direction: column;
             align-items: center;
             flex-wrap: wrap;
-            width: 95%;
-            margin: 4px auto;
+            width: 100%;
+            margin: auto;
             height: auto;
             border: 3px dashed #f596c8;
-            box-shadow: 0 0 0 12px rgba(218, 117, 238, 0.349);
+            box-shadow: none;
             .bx-top {
                 display: flex;
                 flex-direction: column;
@@ -489,12 +489,12 @@
                     width: 100%;
                     height: 100%;
                     figure {
-                        width: 90%;
+                        width: 100%;
                         margin: 10px;
                     }
                 }
                 &__b {
-                    width: 70%;
+                    width: 100%;
                     height: auto;
                     div {
                         display: flex;

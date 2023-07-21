@@ -453,19 +453,22 @@ svg {
   height: 30%;
 }
 .iglesia__content .bx-top__b div:nth-child(2) {
-  height: 70%;
+  height: auto;
 }
 .iglesia__content .bx-top__b div:nth-child(2) a {
   font-family: "Rancho", cursive;
-  margin: 6px auto;
+  margin: 0 auto 18px auto;
   background: #f5eab0;
-  padding: 4px 12px;
+  padding: 20px 40px;
+  width: 90%;
+  text-align: center;
+  font-size: 3rem;
 }
 .iglesia__content .bx-top__b div:nth-child(2) a:hover {
   background: #fad72b;
 }
 .iglesia__content .bx-top__b div:nth-child(2) iframe {
-  height: 100%;
+  height: 280px;
 }
 .iglesia__content .bx-bot {
   display: flex;
@@ -601,21 +604,18 @@ svg {
     width: 100%;
     height: 100vh;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    display: block;
   }
   .iglesia__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    width: 95%;
-    margin: 4px auto;
+    width: 100%;
+    margin: auto;
     height: auto;
     border: 3px dashed #f596c8;
-    box-shadow: 0 0 0 12px rgba(218, 117, 238, 0.349);
+    box-shadow: none;
   }
   .iglesia__content .bx-top {
     display: flex;
@@ -635,11 +635,11 @@ svg {
     height: 100%;
   }
   .iglesia__content .bx-top__a figure {
-    width: 90%;
+    width: 100%;
     margin: 10px;
   }
   .iglesia__content .bx-top__b {
-    width: 70%;
+    width: 100%;
     height: auto;
   }
   .iglesia__content .bx-top__b div {
