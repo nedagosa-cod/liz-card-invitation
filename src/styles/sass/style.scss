@@ -2,82 +2,96 @@
 @use 'variables' as *;
 
 .leaf-box {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     pointer-events: none;
     overflow: hidden;
+
     div {
-        &:nth-child(1){
+        &:nth-child(1) {
             left: 4%;
             animation: leafallin 15s linear infinite;
             animation-delay: -7s;
         }
-        &:nth-child(2){
+
+        &:nth-child(2) {
             left: 9%;
             animation: leafallin 20s linear infinite;
             animation-delay: -5s;
         }
-        &:nth-child(3){
+
+        &:nth-child(3) {
             left: 15%;
             animation: leafallin 20s linear infinite;
             animation-delay: 0s;
         }
-        &:nth-child(4){
+
+        &:nth-child(4) {
             left: 85%;
             animation: leafallin 15s linear infinite;
             animation-delay: -5s;
         }
-        &:nth-child(5){
+
+        &:nth-child(5) {
             left: 93%;
             animation: leafallin 12s linear infinite;
             animation-delay: -7s;
         }
-        &:nth-child(6){
+
+        &:nth-child(6) {
             left: 98%;
             animation: leafallin 20s linear infinite;
             animation-delay: -1s;
         }
-        &:nth-child(7){
+
+        &:nth-child(7) {
             left: 100%;
             animation: leafallin 17s linear infinite;
             animation-delay: -4s;
         }
-        &:nth-child(8){
+
+        &:nth-child(8) {
             left: 12%;
             animation: leafallin 12s linear infinite;
             animation-delay: -7s;
         }
-        &:nth-child(9){
+
+        &:nth-child(9) {
             left: 0%;
             animation: leafallin 22s linear infinite;
             animation-delay: -3s;
         }
-        &:nth-child(10){
+
+        &:nth-child(10) {
             left: 88%;
             animation: leafallin 22s linear infinite;
             animation-delay: -3s;
         }
-        &:nth-child(11){
+
+        &:nth-child(11) {
             left: 97%;
             animation: leafallin 15s linear infinite;
             animation-delay: -7s;
         }
-        &:nth-child(12){
+
+        &:nth-child(12) {
             left: 99%;
             animation: leafallin 24s linear infinite;
             animation-delay: -1s;
         }
     }
-    .leaf{
+
+    .leaf {
         position: absolute;
         display: block;
         background-color: #ff7417;
         height: 40px;
         width: 40px;
         border-radius: 250px 0;
+
         &.l {
             border-radius: 0 250px;
         }
@@ -90,21 +104,27 @@
         top: -10%;
         transform: translateX(20px) rotate(0deg);
     }
+
     10% {
         opacity: 1;
     }
+
     20% {
         transform: translateX(-20px) rotate(45deg);
     }
+
     40% {
         transform: translateX(-20px) rotate(90deg);
     }
+
     60% {
         transform: translateX(20px) rotate(180deg);
-    }    
+    }
+
     80% {
         transform: translateX(-20px) rotate(180deg);
     }
+
     100% {
         top: 110%;
         transform: translateX(-20px) rotate(255deg);
@@ -112,12 +132,16 @@
     }
 }
 
+.myhr {
+    width: 30%;
+    margin: 20px auto;
+}
 
 .root {
     max-width: 1080px;
     margin: 10px auto;
     -webkit-box-shadow: 0px 0px 0px 10px rgb(255, 138, 84);
-    -moz-box-shadow: 0px 0px 0px 10px rgba(255,255,84,1);
+    -moz-box-shadow: 0px 0px 0px 10px rgba(255, 255, 84, 1);
     box-shadow: 0px 0px 0px 10px rgb(148, 67, 1);
     position: relative;
     border: 3px dashed #ff9700;
@@ -134,6 +158,7 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+
     &::before {
         content: "";
         background-image: inherit;
@@ -147,10 +172,12 @@
         width: 100%;
         height: 100%;
     }
+
     &__adorno {
         position: absolute;
         top: 100%;
     }
+
     .button {
         display: none;
         padding: 8px;
@@ -166,6 +193,7 @@
         transform: translateX(-50%);
         color: white;
     }
+
     .logo {
         position: relative;
         width: 55%;
@@ -173,21 +201,20 @@
         filter: drop-shadow(0 2px 2px rgba(255, 153, 0, 0.952));
     }
 }
-.main{
+
+.main {
     width: 100%;
     position: relative;
     border: 2px solid white;
     // background: yellow;
-    .myhr {
-        width: 30%;
-        margin: 20px auto;
-    }
+
     .titulo {
         text-align: center;
         font-size: 9rem;
         color: #ff9700;
         margin: 20px auto;
     }
+
     .subtitulo {
         font-family: $tipo-secundaria;
         text-align: center;
@@ -195,10 +222,12 @@
         margin: 20px auto;
         width: 60%;
     }
+
     .box-counter {
         display: flex;
         width: 85%;
         margin: auto;
+
         p {
             display: flex;
             flex-direction: column;
@@ -221,6 +250,7 @@
             }
         }
     }
+
     .protocolo {
         width: 100%;
         padding: 60px 10%;
@@ -229,10 +259,12 @@
         justify-content: center;
         align-items: center;
         background: #fcd9c2;
+
         .flecha {
             margin: 0 10px;
         }
     }
+
     model-viewer {
         margin: auto;
         width: 20%;
@@ -246,6 +278,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     &__content {
         border: 3px dashed #f596c8;
         box-shadow: 0 0 0 12px rgba(218, 117, 238, 0.349);
@@ -254,6 +287,7 @@
         flex-wrap: wrap;
         width: 800px;
         height: 600px;
+
         .bx-top {
             position: relative;
             display: flex;
@@ -266,6 +300,7 @@
             -webkit-box-shadow: 0px 10px 0px 0px rgba(0, 57, 59, 0.75);
             -moz-box-shadow: 0px 10px 0px 0px rgba(0, 57, 59, 0.75);
             box-shadow: 0px 10px 0px 0px rgba(0, 57, 59, 0.75);
+
             &__a {
                 display: flex;
                 flex-direction: column;
@@ -277,32 +312,37 @@
                 height: 100%;
                 border: 1px dashed #f596c8;
                 padding: 8px;
+
                 h1 {
                     margin: 6px auto;
                 }
+
                 figure {
                     width: 86%;
                     margin: auto;
                     border: 3px outset #96eff5;
                 }
             }
+
             &__b {
                 display: flex;
                 flex-direction: column;
                 gap: 12px;
                 width: 30%;
                 height: 100%;
+
                 div {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     font-size: 2rem;
                     width: 100%;
-                    &:nth-child(1){
 
-                    }
-                    &:nth-child(2){
+                    &:nth-child(1) {}
+
+                    &:nth-child(2) {
                         height: auto;
+
                         a {
                             font-family: $tipo-secundaria;
                             margin: 0 auto 18px auto;
@@ -310,10 +350,12 @@
                             padding: 8px 12px;
                             width: 90%;
                             text-align: center;
+
                             &:hover {
                                 background: #fad72b;
                             }
                         }
+
                         iframe {
                             height: auto;
                         }
@@ -322,6 +364,7 @@
                 }
             }
         }
+
         .bx-bot {
             display: flex;
             flex-direction: column;
@@ -332,54 +375,161 @@
             text-align: center;
             font-size: 3rem;
             font-family: $tipo-secundaria;
+
             hr {
                 width: 50%;
                 margin: 4px auto;
             }
+
             h1 {
                 font-size: 3.4rem;
                 margin: 4px auto;
             }
+
             h3 {
                 font-size: 2.6rem;
             }
+
             p {
                 font-size: 2.2rem;
             }
-            
+
         }
     }
+
     .div {
         position: absolute;
+
         &:nth-child(1) {
             top: 0;
             right: 0;
         }
+
         &:nth-child(3) {
             bottom: 0;
             left: 0;
         }
+
         .capa_1 {
             width: 600px;
             margin: 20px;
+
             path {
                 fill: #faa972;
             }
         }
+
         .capa_3 {
             width: 600px;
             margin: 20px;
+
             path {
                 fill: #ff7417;
             }
-        }    
+        }
     }
 }
+
+
+
+.evento {
+    .myhr {
+        width: 30%;
+        margin: 20px auto;
+    }
+    .card {
+        position: relative;
+        width: 60%;
+        height: 520px;
+        color: #2e2d31;
+        background: $w-color;
+        overflow: hidden;
+        margin: 60px auto;
+        font-size: 4rem;
+        border: 3px dashed #f596c8;
+        box-shadow: 0 0 0 12px rgba(218, 117, 238, 0.349);
+    }
+
+    .temporary_text {
+        font-weight: bold;
+        font-size: 24px;
+        color: #f8f8f8;
+    }
+
+    .card_title {
+        font-weight: bold;
+    }
+
+    .card_content {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        /* edit the width to fit card */
+        width: 100%;
+        padding: 20px;
+        background: #96eff5;
+        border-top-left-radius: 20px;
+        /* edit here to change the height of the content box */
+        transform: translateY(150px);
+        transition: transform .25s;
+        transform: translateY(0);
+        font-family: $tipo-secundaria;
+        box-shadow: 0 -2px 4px 2px rgba(0, 0, 0, .5);
+    }
+
+    .card_content::before {
+        content: '';
+        position: absolute;
+        top: -47px;
+        right: -45px;
+        width: 100px;
+        height: 100px;
+        transform: rotate(-175deg);
+        border-radius: 50%;
+        box-shadow: inset 48px 48px #96eff5;
+        z-index: 10;
+    }
+
+    .card_title {
+        color: #131313;
+        line-height: 15px;
+        font-size: 4rem;
+        font-weight: 600;
+    }
+
+    .card_subtitle {
+        display: block;
+        font-size: 12px;
+        margin-bottom: 10px;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    .card_description {
+        font-size: 1.8rem;
+        opacity: 1;
+        transition: opacity .5s;
+    }
+    &__mapa {
+        width: 60%;
+        margin: 60px auto;
+        padding: 8px 16px;
+        background: #f8bf04;
+        font-family: $tipo-secundaria;
+        font-size: 4rem;
+        text-align: center;
+    }
+}
+
 
 
 @media only screen and (max-width: 600px) {
     .leaf-box {
         display: none;
+    }
+    .myhr {
+        width: 80%;
+        margin: 20px auto;
     }
     .root {
         width: 100vw;
@@ -390,12 +540,14 @@
         position: relative;
         border: none;
     }
+
     .header {
         width: 100vw;
         background-image: url('../../assets/img/header_mobile.jpg');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+
         .logo {
             position: absolute;
             top: 30%;
@@ -403,30 +555,38 @@
             margin: auto;
             filter: drop-shadow(0 2px 2px rgba(8, 5, 0, 0.952));
         }
+
         .button {
             display: block;
         }
     }
-    .main{
+
+    .main {
         overflow: hidden;
+
         .myhr {
             width: 80%;
         }
+
         .titulo {
             font-size: 5rem;
         }
+
         .subtitulo {
             font-family: $tipo-secundaria;
             font-size: 1.4rem;
             width: 90%;
         }
+
         model-viewer {
             width: 90%;
         }
+
         .box-counter {
             width: 100%;
             margin: auto;
             overflow: hidden;
+
             p {
                 font-size: 6rem;
                 margin: 20px auto;
@@ -434,34 +594,40 @@
                 background: red;
                 width: 80px;
                 align-items: center;
-    
+
                 border: none;
                 border-radius: 10px;
                 background: radial-gradient(ellipse farthest-side at 76% 77%, rgba(245, 228, 212, 0.25) 4%, rgba(255, 255, 255, 0) calc(4% + 1px)), radial-gradient(circle at 76% 40%, #fef6ec 4%, rgba(255, 255, 255, 0) 4.18%), linear-gradient(135deg, #ff0000 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgba(98, 149, 144, 0.5) 100%), linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%);
                 background-blend-mode: normal, normal, screen, overlay, normal;
                 box-shadow: 0px 0px 10px 1px #000000;
+
                 span {
                     font-size: 2rem;
                     margin: 8px auto;
                 }
             }
         }
+
         .protocolo {
             flex-direction: column;
             gap: 30px;
+
             figure {
                 width: 40%;
             }
+
             .flecha {
                 transform: rotate(90deg) scale(.5);
             }
         }
     }
+
     .iglesia {
         width: 100%;
-        height: 100vh;
+        height: auto;
         position: relative;
         display: block;
+
         &__content {
             display: flex;
             flex-direction: column;
@@ -472,6 +638,7 @@
             height: auto;
             border: 3px dashed #f596c8;
             box-shadow: none;
+
             .bx-top {
                 display: flex;
                 flex-direction: column;
@@ -481,36 +648,43 @@
                 height: auto;
                 font-size: 6rem;
                 background: #ffe5f3;
+
                 &__a {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     width: 100%;
                     height: 100%;
+
                     figure {
                         width: 100%;
                         margin: 10px;
                     }
                 }
+
                 &__b {
                     width: 100%;
                     height: auto;
+
                     div {
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         width: 100%;
                         height: 50%;
+
                         figure {
                             width: 90%;
                             margin: 10px;
                         }
+
                         iframe {
                             width: 90%;
                         }
                     }
                 }
             }
+
             .bx-bot {
                 width: 100%;
                 height: 30%;
@@ -518,34 +692,54 @@
                 padding: 14px 0;
             }
         }
+
         .div {
             // display: none;
             position: relative;
+
             &.hide {
                 display: none;
             }
+
             &:nth-child(1) {
                 top: 0;
                 right: 0;
             }
+
             &:nth-child(3) {
                 bottom: 0;
                 left: 0;
             }
+
             .capa_1 {
                 width: 300px;
                 margin: 10px;
+
                 path {
                     fill: #faa972;
                 }
             }
+
             .capa_3 {
                 width: 350px;
                 margin: 10px;
+
                 path {
                     fill: #ff7417;
                 }
-            }    
+            }
+        }
+    }
+    .evento {
+        width: 100%;
+        padding: 20px 10px;
+        .myhr {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .card {
+            width: 90%;
+            height: 390px;
         }
     }
 }
