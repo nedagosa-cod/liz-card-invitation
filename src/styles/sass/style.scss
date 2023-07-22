@@ -705,8 +705,6 @@
             width: 100%;
             margin: auto;
             height: auto;
-            border: 3px dashed #f596c8;
-            box-shadow: none;
 
             .bx-top {
                 display: flex;
@@ -716,8 +714,6 @@
                 width: 100%;
                 height: auto;
                 font-size: 6rem;
-                background: #ffe5f3;
-
                 &__a {
                     display: flex;
                     justify-content: center;
@@ -757,7 +753,6 @@
             .bx-bot {
                 width: 100%;
                 height: 30%;
-                background: rgb(136, 191, 216);
                 padding: 14px 0;
             }
         }
