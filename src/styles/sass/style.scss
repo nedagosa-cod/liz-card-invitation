@@ -140,11 +140,9 @@
 .root {
     max-width: 1080px;
     margin: 10px auto;
-    -webkit-box-shadow: 0px 0px 0px 10px rgb(255, 138, 84);
-    -moz-box-shadow: 0px 0px 0px 10px rgba(255, 255, 84, 1);
-    box-shadow: 0px 0px 0px 10px rgb(148, 67, 1);
     position: relative;
-    border: 3px dashed #ff9700;
+    border: 3px dashed #fd9800;
+    box-shadow: 0 0 0 12px rgba(255, 174, 0, 0.521);
 }
 
 .header {
@@ -258,7 +256,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #fcd9c2;
+        background: #ffe7a5;
 
         .flecha {
             margin: 0 10px;
@@ -280,8 +278,8 @@
     align-items: center;
 
     &__content {
-        border: 3px dashed #f596c8;
-        box-shadow: 0 0 0 12px rgba(218, 117, 238, 0.349);
+        border: 3px dashed #fd9800;
+        box-shadow: 0 0 0 12px rgba(255, 174, 0, 0.521);
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -296,7 +294,7 @@
             height: 70%;
             padding: 24px;
             font-size: 6rem;
-            background: #ffe5f3;
+            background: #feffec;
             -webkit-box-shadow: 0px 10px 0px 0px rgba(0, 57, 59, 0.75);
             -moz-box-shadow: 0px 10px 0px 0px rgba(0, 57, 59, 0.75);
             box-shadow: 0px 10px 0px 0px rgba(0, 57, 59, 0.75);
@@ -371,7 +369,7 @@
             justify-content: center;
             width: 100%;
             height: 30%;
-            background: rgb(154, 214, 241);
+            background: #ffe7a5;
             text-align: center;
             font-size: 3rem;
             font-family: $tipo-secundaria;
@@ -430,8 +428,6 @@
     }
 }
 
-
-
 .evento {
     .myhr {
         width: 30%;
@@ -448,6 +444,18 @@
         font-size: 4rem;
         border: 3px dashed #fd9800;
         box-shadow: 0 0 0 12px rgba(255, 174, 0, 0.521);
+        transition: ease .6s;
+        -webkit-transition: ease .6s;
+        -moz-transition: ease .6s;
+        -ms-transition: ease .6s;
+        -o-transition: ease .6s;
+        &:hover{
+            transform: translateY(-10px);
+            -webkit-transform: translateY(-10px);
+            -moz-transform: translateY(-10px);
+            -ms-transform: translateY(-10px);
+            -o-transform: translateY(-10px);
+        }
     }
 
     .temporary_text {
@@ -521,6 +529,30 @@
     }
 }
 
+
+.bebes {
+    width: 100%;
+    background: #ffe7a5;
+    font-size: 4rem;
+    text-align: center;
+    padding: 20px 10px;
+    font-family: $tipo-secundaria;
+    span {
+        display: block;
+        margin: 12px auto;
+        width: 80%;
+        font-size: 2.6rem;
+    }
+    p {
+        width: 50%;
+        margin: auto;
+        font-size: 2.6rem;
+    }
+    svg {
+        width: 30%;
+        margin: 16px auto;
+    }
+}
 
 
 @media only screen and (max-width: 600px) {
@@ -740,6 +772,25 @@
         .card {
             width: 90%;
             height: 390px;
+        }
+    }
+    .bebes {
+        h2 {
+            font-size: 2.8rem;
+        }
+        span {
+            width: 95%;
+            font-size: 1.8rem;
+        }
+        svg {
+            width: 70%;
+        }
+        h3 {
+            font-size: 2.6rem;
+        }
+        p {
+            width: 95%;
+            font-size: 1.8rem;
         }
     }
 }
