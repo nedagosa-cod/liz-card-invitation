@@ -446,8 +446,8 @@
         overflow: hidden;
         margin: 60px auto;
         font-size: 4rem;
-        border: 3px dashed #f596c8;
-        box-shadow: 0 0 0 12px rgba(218, 117, 238, 0.349);
+        border: 3px dashed #fd9800;
+        box-shadow: 0 0 0 12px rgba(255, 174, 0, 0.521);
     }
 
     .temporary_text {
@@ -467,7 +467,7 @@
         /* edit the width to fit card */
         width: 100%;
         padding: 20px;
-        background: #96eff5;
+        background: #ffe7a5;
         border-top-left-radius: 20px;
         /* edit here to change the height of the content box */
         transform: translateY(150px);
@@ -486,7 +486,7 @@
         height: 100px;
         transform: rotate(-175deg);
         border-radius: 50%;
-        box-shadow: inset 48px 48px #96eff5;
+        box-shadow: inset 48px 48px #ffe7a5;
         z-index: 10;
     }
 
@@ -524,9 +524,9 @@
 
 
 @media only screen and (max-width: 600px) {
-    .leaf-box {
-        display: none;
-    }
+    // .leaf-box {
+    //     display: none;
+    // }
     .myhr {
         width: 80%;
         margin: 20px auto;
