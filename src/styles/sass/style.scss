@@ -312,10 +312,7 @@
             padding: 24px;
             font-size: 6rem;
             background: #feffec;
-            -webkit-box-shadow: 0px 10px 0px 0px rgba(0, 57, 59, 0.75);
-            -moz-box-shadow: 0px 10px 0px 0px rgba(0, 57, 59, 0.75);
-            box-shadow: 0px 10px 0px 0px rgba(0, 57, 59, 0.75);
-
+            box-shadow: 0px 10px 0px 0px rgba(58, 59, 0, 0.75);
             &__a {
                 display: flex;
                 flex-direction: column;
@@ -325,7 +322,7 @@
                 overflow: hidden;
                 width: 70%;
                 height: 100%;
-                border: 1px dashed #f596c8;
+                border: 1px dashed #f5f396;
                 padding: 8px;
 
                 h1 {
@@ -335,7 +332,7 @@
                 figure {
                     width: 86%;
                     margin: auto;
-                    border: 3px outset #96eff5;
+                    border: 3px outset #f5f396;
                 }
             }
 
@@ -696,14 +693,13 @@
         height: auto;
         position: relative;
         display: block;
-
         &__content {
             display: flex;
             flex-direction: column;
             align-items: center;
             flex-wrap: wrap;
-            width: 100%;
-            margin: auto;
+            width: 94%;
+            margin: 10px auto;
             height: auto;
 
             .bx-top {
@@ -812,7 +808,7 @@
         }
         span {
             width: 95%;
-            font-size: 1.8rem;
+            font-size: 2rem;
         }
         svg {
             width: 70%;
@@ -822,7 +818,7 @@
         }
         p {
             width: 95%;
-            font-size: 1.8rem;
+            font-size: 2rem;
         }
     }
 }

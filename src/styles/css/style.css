@@ -428,9 +428,7 @@ svg {
   padding: 24px;
   font-size: 6rem;
   background: #feffec;
-  -webkit-box-shadow: 0px 10px 0px 0px rgba(0, 57, 59, 0.75);
-  -moz-box-shadow: 0px 10px 0px 0px rgba(0, 57, 59, 0.75);
-  box-shadow: 0px 10px 0px 0px rgba(0, 57, 59, 0.75);
+  box-shadow: 0px 10px 0px 0px rgba(58, 59, 0, 0.75);
 }
 .iglesia__content .bx-top__a {
   display: flex;
@@ -441,7 +439,7 @@ svg {
   overflow: hidden;
   width: 70%;
   height: 100%;
-  border: 1px dashed #f596c8;
+  border: 1px dashed #f5f396;
   padding: 8px;
 }
 .iglesia__content .bx-top__a h1 {
@@ -450,7 +448,7 @@ svg {
 .iglesia__content .bx-top__a figure {
   width: 86%;
   margin: auto;
-  border: 3px outset #96eff5;
+  border: 3px outset #f5f396;
 }
 .iglesia__content .bx-top__b {
   display: flex;
@@ -762,8 +760,8 @@ svg {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    width: 100%;
-    margin: auto;
+    width: 94%;
+    margin: 10px auto;
     height: auto;
   }
   .iglesia__content .bx-top {
@@ -854,7 +852,7 @@ svg {
   }
   .bebes span {
     width: 95%;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .bebes svg {
     width: 70%;
@@ -864,7 +862,7 @@ svg {
   }
   .bebes p {
     width: 95%;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 
