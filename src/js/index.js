@@ -167,4 +167,7 @@ lightbox.option({
     wrapAround: true,
     disableScrolling: true,
   });
+
+  const audio = document.getElementById('audio');
+  audio.valume = 0.5
   
