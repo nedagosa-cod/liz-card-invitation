@@ -15,6 +15,7 @@ html {
 }
 
 body {
+  position: relative;
   width: 100%;
   height: 100vh;
   font-size: 100%;
@@ -261,6 +262,19 @@ svg {
     opacity: 0;
   }
 }
+audio {
+  position: fixed;
+  opacity: 0.3;
+  z-index: 100;
+  bottom: 0;
+  right: 0;
+  margin: 12px;
+  width: 200px;
+}
+audio:hover {
+  opacity: 0.9;
+}
+
 .myhr {
   width: 30%;
   margin: 20px auto;
@@ -696,6 +710,10 @@ svg {
 }
 
 @media only screen and (max-width: 600px) {
+  audio {
+    width: 110px;
+    opacity: 0.1;
+  }
   .myhr {
     width: 80%;
     margin: 20px auto;
@@ -715,6 +733,7 @@ svg {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    overflow: hidden;
   }
   .header .logo {
     position: absolute;
@@ -783,6 +802,7 @@ svg {
     height: auto;
     position: relative;
     display: block;
+    overflow: hidden;
   }
   .iglesia__content {
     display: flex;

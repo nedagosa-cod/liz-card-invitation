@@ -169,5 +169,4 @@ lightbox.option({
   });
 
   const audio = document.getElementById('audio');
-  audio.valume = 0.5
-  
+  audio.volume = 0.3

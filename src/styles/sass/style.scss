@@ -132,6 +132,19 @@
     }
 }
 
+
+audio {
+    position: fixed;
+    opacity: .3;
+    z-index: 100;
+    bottom: 0;
+    right: 0;
+    margin: 12px;
+    width: 200px;
+    &:hover {
+        opacity: .9;
+    }
+}
 .myhr {
     width: 30%;
     margin: 20px auto;
@@ -645,6 +658,10 @@
     // .leaf-box {
     //     display: none;
     // }
+    audio {
+        width: 110px;
+        opacity: .1;
+    }
     .myhr {
         width: 80%;
         margin: 20px auto;
@@ -665,7 +682,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-
+        overflow: hidden;
         .logo {
             position: absolute;
             top: 30%;
@@ -747,6 +764,7 @@
         height: auto;
         position: relative;
         display: block;
+        overflow: hidden;
         &__content {
             display: flex;
             flex-direction: column;
