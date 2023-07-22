@@ -729,6 +729,7 @@ audio:hover {
     box-shadow: none;
     position: relative;
     border: none;
+    overflow-x: none;
   }
   .header {
     width: 100vw;
