@@ -642,6 +642,59 @@ svg {
   margin: 16px auto;
 }
 
+.galeria {
+  width: 100%;
+  /* Let's make it responsive */
+}
+.galeria .titulo {
+  text-align: center;
+  font-size: 9rem;
+  color: #ff9700;
+  margin: 80px auto;
+}
+.galeria .grid-gallery {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 300px;
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+}
+.galeria .grid-gallery .grid-item {
+  position: relative;
+  background-color: #efefef;
+  overflow: hidden;
+}
+.galeria .grid-gallery .grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.galeria .grid-gallery .grid-item:hover img {
+  transform: scale(1.1);
+}
+.galeria .grid-gallery .grid-item a {
+  cursor: zoom-in;
+}
+.galeria .grid-gallery .grid-item:nth-child(3n-2) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+@media (max-width: 768px) {
+  .galeria .grid-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 400px;
+  }
+  .galeria .grid-gallery .grid-item:nth-child(3n-2) {
+    grid-column: unset;
+    grid-row: unset;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .myhr {
     width: 80%;

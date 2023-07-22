@@ -160,3 +160,11 @@ tl.to('.logo', {
         scrub: 1
     }
 })
+
+
+lightbox.option({
+    resizeDuration: 200,
+    wrapAround: true,
+    disableScrolling: true,
+  });
+  
