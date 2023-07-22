@@ -207,21 +207,21 @@
     // background: yellow;
     .boxmodel {
         position: relative;
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 20%;
-            height: 6px;
-            background: #fff;
-            z-index: 20;
-            -webkit-transform: translateX(-50%);
-            -moz-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            -o-transform: translateX(-50%);
-}
+//         &::before {
+//             content: '';
+//             position: absolute;
+//             top: 0;
+//             left: 50%;
+//             transform: translateX(-50%);
+//             width: 20%;
+//             height: 6px;
+//             background: #fff;
+//             z-index: 20;
+//             -webkit-transform: translateX(-50%);
+//             -moz-transform: translateX(-50%);
+//             -ms-transform: translateX(-50%);
+//             -o-transform: translateX(-50%);
+// }
     }
     .titulo {
         text-align: center;
@@ -279,8 +279,16 @@
             margin: 0 10px;
         }
     }
-
+    .boxmodel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        overflow: hidden;
+    }
     model-viewer {
+        position: relative;
+        top: -6px;
         margin: auto;
         width: 20%;
     }
@@ -612,24 +620,6 @@
 
     .main {
         overflow: hidden;
-        .boxmodel {
-            position: relative;
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 90%;
-                height: 6px;
-                background: #fff;
-                z-index: 20;
-                -webkit-transform: translateX(-50%);
-                -moz-transform: translateX(-50%);
-                -ms-transform: translateX(-50%);
-                -o-transform: translateX(-50%);
-            }
-        }
         .myhr {
             width: 80%;
         }
@@ -821,4 +811,9 @@
             font-size: 2rem;
         }
     }
+    @keyframes hidebar {
+        0% {opacity: 1;}
+        100% {opacity: 0;}
+    }
 }
+

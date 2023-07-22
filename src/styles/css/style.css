@@ -333,21 +333,6 @@ svg {
 .main .boxmodel {
   position: relative;
 }
-.main .boxmodel::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20%;
-  height: 6px;
-  background: #fff;
-  z-index: 20;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-}
 .main .titulo {
   text-align: center;
   font-size: 9rem;
@@ -397,7 +382,16 @@ svg {
 .main .protocolo .flecha {
   margin: 0 10px;
 }
+.main .boxmodel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  overflow: hidden;
+}
 .main model-viewer {
+  position: relative;
+  top: -6px;
   margin: auto;
   width: 20%;
 }
@@ -685,24 +679,6 @@ svg {
   .main {
     overflow: hidden;
   }
-  .main .boxmodel {
-    position: relative;
-  }
-  .main .boxmodel::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    height: 6px;
-    background: #fff;
-    z-index: 20;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-  }
   .main .myhr {
     width: 80%;
   }
@@ -863,6 +839,14 @@ svg {
   .bebes p {
     width: 95%;
     font-size: 2rem;
+  }
+  @keyframes hidebar {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 }
 
