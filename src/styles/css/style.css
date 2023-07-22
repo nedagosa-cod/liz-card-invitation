@@ -710,6 +710,9 @@ audio:hover {
 }
 
 @media only screen and (max-width: 600px) {
+  .leaf-box {
+    display: none;
+  }
   audio {
     width: 110px;
     opacity: 0.1;

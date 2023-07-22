@@ -655,9 +655,9 @@ audio {
 
 
 @media only screen and (max-width: 600px) {
-    // .leaf-box {
-    //     display: none;
-    // }
+    .leaf-box {
+        display: none;
+    }
     audio {
         width: 110px;
         opacity: .1;
