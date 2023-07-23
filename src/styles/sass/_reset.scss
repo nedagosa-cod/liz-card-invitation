@@ -38,9 +38,9 @@ body {
     /* opcional */
     -moz-osx-font-smoothing: grayscale;
     /* opcional Background */
-    &::-webkit-scrollbar {
-        display: none;
-    }
+    // &::-webkit-scrollbar {
+    //     display: none;
+    // }
 }
 
 /* Evitamos problemas con las imagenes */
