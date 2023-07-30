@@ -1,94 +1,33 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// function createAnimation(element) {
-//     return gsap.timeline({
-//       scrollTrigger: {
-//         trigger: element,
-//         scroller: 'body',
-//         start: "top 100%",
-//         end: "top 65%",
-//         scrub: 1,
-//         markers: true
-//       },
-//     })
-//     .fromTo(element, {opacity: .5, top: '100%', position: 'relative'},
-//     { 
-//         opacity:1,
-//         y:'-95%',
-//         duration: 0.3,
-//     })
-//     .fromTo('.title', {opacity: 0, top: 0},
-//     { 
-//         opacity:1,
-//         y:'-95%',
-//         duration: 0.3,
-//     })
-// }
 
-// gsap.to('.main__adorno',{
-//     opacity:1,
-//     top:'-95%',
-//     duration: 0.3,
-//     markers: true,
-//     scrollTrigger : 'body'
-// })
+function createAnimation(element) {
+    return gsap.timeline({
+      scrollTrigger: {
+        trigger: element,
+        start: "top 95%",
+        end: "top 85%",
+        toggleActions: "play none reverse none",
+        scrub: 2,
+        markers: false
+      },
+    })
+    .fromTo(element, {opacity: 0, y: 50},
+    { 
+        opacity:1,
+        y:0,
+        duration: 0.5,
+    })
+  }
+
+  
+const elements = document.querySelectorAll(".anim");
+elements.forEach((element) => createAnimation(element));
 
 
-// gsap.timeline({
-//     scrollTrigger: {
-//     trigger: '.main__adorno',
-//     scroller: 'body',
-//     start: "top 100%",
-//     end: "top 65%",
-//     scrub: 1,
-//     // markers: true
-//     }
-// })
-// .fromTo('.main__adorno', {top: '100%', position: 'relative'},
-// { 
-//     y:'-95%',
-//     duration: 0.3,
-// })
-
-// gsap.timeline({
-//     scrollTrigger: {
-//     trigger: '.titulo',
-//     scroller: 'body',
-//     start: "top 120%",
-//     end: "top 80%",
-//     scrub: 1,
-//     }
-// })
-// .fromTo('.main', {opacity: 0, y: 150},
-// { 
-//     opacity:1,
-//     y:'-5%',
-//     duration: 0.3,
-// })
-
-// gsap.timeline({
-//     scrollTrigger: {
-//     trigger: '.logo',
-//     scroller: 'body',
-//     start: "100% 75%",
-//     end: "100% 40%",
-//     scrub: 1,
-//     markers: true
-//     }
-// })
-// .fromTo('.logo', {scale: 1, yPercent: 0},
-// { 
-//     scale:.8,
-//     yPercent: -40,
-//     duration: 0.3,
-// })
 
 
-// const elements = document.querySelectorAll(".anim");
-// const elFade = document.querySelectorAll(".fade");
 
-// elements.forEach((element) => createAnimation(element));
-// elFade.forEach((element) => normalFade(element));
 
 
 // Set the date we're counting down to
