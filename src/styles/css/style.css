@@ -15,11 +15,12 @@ html {
 }
 
 body {
+  background-color: #fefae0;
   position: relative;
   width: 100%;
   height: 100vh;
   font-size: 100%;
-  font-family: "Tangerine", cursive;
+  font-family: "Cormorant Unicase", serif;
   color: #292c35;
   /* opcional */
   font-smooth: always;
@@ -89,6 +90,7 @@ em {
   font-size: 1em;
   text-decoration: none;
   color: inherit;
+  font-weight: lighter;
 }
 
 /* Evitamos problemas con los pseudoelementos de quotes */
@@ -107,7 +109,7 @@ q:after {
 }
 
 ::selection {
-  background-color: #ff8300;
+  background-color: #d4a373;
   color: #fff;
 }
 
@@ -223,7 +225,7 @@ svg {
 .leaf-box .leaf {
   position: absolute;
   display: block;
-  background-color: #ff7417;
+  background-color: #e9edc9;
   height: 40px;
   width: 40px;
   border-radius: 250px 0;
@@ -259,6 +261,89 @@ svg {
     opacity: 0;
   }
 }
+.scrolldown {
+  --sizeX: 30px;
+  --sizeY: 50px;
+  position: absolute;
+  bottom: 5%;
+  width: var(--sizeX);
+  height: var(--sizeY);
+  margin-left: var(sizeX/2);
+  border: calc(var(--sizeX) / 10) solid #e9edc9;
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+.scrolldown::before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: var(--color);
+  border-radius: 100%;
+  animation: scrolldown-anim 2s infinite;
+  box-sizing: border-box;
+  box-shadow: 0px -5px 3px 1px rgba(42, 84, 112, 0.4);
+}
+.scrolldown .chevrons {
+  padding: 6px 0 0 0;
+  margin-left: -3px;
+  margin-top: 48px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scrolldown .chevrondown {
+  margin-top: -6px;
+  position: relative;
+  border: solid #e9edc9;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+
+.chevrondown:nth-child(odd) {
+  animation: pulse54012 500ms ease infinite alternate;
+}
+
+.chevrondown:nth-child(even) {
+  animation: pulse54012 500ms ease infinite alternate 250ms;
+}
+
+@keyframes scrolldown-anim {
+  0% {
+    opacity: 0;
+    height: 6px;
+  }
+  40% {
+    opacity: 1;
+    height: 10px;
+  }
+  80% {
+    transform: translate(0, 20px);
+    height: 10px;
+    opacity: 0;
+  }
+  100% {
+    height: 3px;
+    opacity: 0;
+  }
+}
+@keyframes pulse54012 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
 audio {
   position: fixed;
   opacity: 0.3;
@@ -281,8 +366,8 @@ audio:hover {
   max-width: 1080px;
   margin: 10px auto;
   position: relative;
-  border: 3px dashed #fd9800;
-  box-shadow: 0 0 0 12px rgba(255, 174, 0, 0.521);
+  border: 3px dashed #ccd5ae;
+  box-shadow: 0 0 0 12px #e9edc9;
 }
 
 .header {
@@ -297,19 +382,6 @@ audio:hover {
   background-position: center;
   position: relative;
 }
-.header::before {
-  content: "";
-  background-image: inherit;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: blur(2px);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 99%;
-}
 .header__adorno {
   position: absolute;
   top: 100%;
@@ -320,7 +392,7 @@ audio:hover {
   width: 80%;
   text-align: center;
   margin: auto;
-  background: #ff7417;
+  background: #ccd5ae;
   position: absolute;
   font-size: 3rem;
   font-family: "Rancho", cursive;
@@ -333,13 +405,13 @@ audio:hover {
   position: relative;
   width: 55%;
   margin: auto;
-  filter: drop-shadow(0 2px 2px rgba(255, 153, 0, 0.952));
+  filter: drop-shadow(0 2px 2px #d4a373);
+  -webkit-filter: drop-shadow(0 2px 2px #d4a373);
 }
 
 .main {
   width: 100%;
   position: relative;
-  border: 2px solid white;
 }
 .main .boxmodel {
   position: relative;
@@ -347,7 +419,7 @@ audio:hover {
 .main .titulo {
   text-align: center;
   font-size: 9rem;
-  color: #ff9700;
+  color: #d4a373;
   margin: 20px auto;
 }
 .main .subtitulo {
@@ -359,39 +431,25 @@ audio:hover {
 }
 .main .box-counter {
   display: flex;
+  justify-content: center;
+  gap: 20px;
   width: 85%;
   margin: auto;
+  margin: 20px auto;
 }
 .main .box-counter p {
   display: flex;
   flex-direction: column;
-  font-size: 12rem;
-  margin: 80px auto;
-  text-align: center;
-  background: red;
-  width: 200px;
+  width: 250px;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 20px) 100%, 0 100%);
+  font-size: 6rem;
   align-items: center;
-  border: none;
-  border-radius: 10px;
-  background: radial-gradient(ellipse farthest-side at 76% 77%, rgba(245, 228, 212, 0.25) 4%, rgba(255, 255, 255, 0) calc(4% + 1px)), radial-gradient(circle at 76% 40%, #fef6ec 4%, rgba(255, 255, 255, 0) 4.18%), linear-gradient(135deg, #ff0000 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgba(98, 149, 144, 0.5) 100%), linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%);
-  background-blend-mode: normal, normal, screen, overlay, normal;
-  box-shadow: 0px 0px 10px 1px #000000;
+  text-align: center;
+  border: 2px solid #ccd5ae;
 }
 .main .box-counter p span {
   font-size: 4rem;
   margin: 8px auto;
-}
-.main .protocolo {
-  width: 100%;
-  padding: 60px 10%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #ffe7a5;
-}
-.main .protocolo .flecha {
-  margin: 0 10px;
 }
 .main .boxmodel {
   display: flex;
@@ -416,8 +474,8 @@ audio:hover {
   align-items: center;
 }
 .iglesia__content {
-  border: 3px dashed #fd9800;
-  box-shadow: 0 0 0 12px rgba(255, 174, 0, 0.521);
+  border: 3px dashed #e9edc9;
+  box-shadow: 0 0 0 12px #e9edc9;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -433,7 +491,7 @@ audio:hover {
   padding: 24px;
   font-size: 6rem;
   background: #feffec;
-  box-shadow: 0px 10px 0px 0px rgba(58, 59, 0, 0.75);
+  box-shadow: 0px 10px 0px 0px #e9edc9;
 }
 .iglesia__content .bx-top__a {
   display: flex;
@@ -444,7 +502,7 @@ audio:hover {
   overflow: hidden;
   width: 70%;
   height: 100%;
-  border: 1px dashed #f5f396;
+  border: 1px dashed #faedcd;
   padding: 8px;
 }
 .iglesia__content .bx-top__a h1 {
@@ -453,7 +511,7 @@ audio:hover {
 .iglesia__content .bx-top__a figure {
   width: 86%;
   margin: auto;
-  border: 3px outset #f5f396;
+  border: 3px outset #faedcd;
 }
 .iglesia__content .bx-top__b {
   display: flex;
@@ -475,13 +533,13 @@ audio:hover {
 .iglesia__content .bx-top__b div:nth-child(2) a {
   font-family: "Rancho", cursive;
   margin: 0 auto 18px auto;
-  background: #f5eab0;
+  background: #faedcd;
   padding: 8px 12px;
   width: 90%;
   text-align: center;
 }
 .iglesia__content .bx-top__b div:nth-child(2) a:hover {
-  background: #fad72b;
+  background: #d4a373;
 }
 .iglesia__content .bx-top__b div:nth-child(2) iframe {
   height: auto;
@@ -492,7 +550,7 @@ audio:hover {
   justify-content: center;
   width: 100%;
   height: 30%;
-  background: #ffe7a5;
+  background: #faedcd;
   text-align: center;
   font-size: 3rem;
   font-family: "Rancho", cursive;
@@ -527,14 +585,14 @@ audio:hover {
   margin: 20px;
 }
 .iglesia .div .capa_1 path {
-  fill: #faa972;
+  fill: #ccd5ae;
 }
 .iglesia .div .capa_3 {
   width: 600px;
   margin: 20px;
 }
 .iglesia .div .capa_3 path {
-  fill: #ff7417;
+  fill: #ccd5ae;
 }
 
 .evento .myhr {
@@ -550,8 +608,8 @@ audio:hover {
   overflow: hidden;
   margin: 60px auto;
   font-size: 4rem;
-  border: 3px dashed #fd9800;
-  box-shadow: 0 0 0 12px rgba(255, 174, 0, 0.521);
+  border: 3px dashed #e9edc9;
+  box-shadow: 0 0 0 12px #ccd5ae;
   transition: ease 0.6s;
   -webkit-transition: ease 0.6s;
   -moz-transition: ease 0.6s;
@@ -570,9 +628,6 @@ audio:hover {
   font-size: 24px;
   color: #f8f8f8;
 }
-.evento .card_title {
-  font-weight: bold;
-}
 .evento .card_content {
   position: absolute;
   left: 0;
@@ -580,7 +635,7 @@ audio:hover {
   /* edit the width to fit card */
   width: 100%;
   padding: 20px;
-  background: #ffe7a5;
+  background: #faedcd;
   border-top-left-radius: 20px;
   /* edit here to change the height of the content box */
   transform: translateY(150px);
@@ -598,14 +653,13 @@ audio:hover {
   height: 100px;
   transform: rotate(-175deg);
   border-radius: 50%;
-  box-shadow: inset 48px 48px #ffe7a5;
+  box-shadow: inset 48px 48px #faedcd;
   z-index: 10;
 }
 .evento .card_title {
   color: #131313;
   line-height: 15px;
   font-size: 4rem;
-  font-weight: 600;
 }
 .evento .card_subtitle {
   display: block;
@@ -623,7 +677,7 @@ audio:hover {
   width: 60%;
   margin: 60px auto;
   padding: 8px 16px;
-  background: #f8bf04;
+  background: #d4a373;
   font-family: "Rancho", cursive;
   font-size: 4rem;
   text-align: center;
@@ -631,7 +685,7 @@ audio:hover {
 
 .bebes {
   width: 100%;
-  background: #ffe7a5;
+  background: #faedcd;
   font-size: 4rem;
   text-align: center;
   padding: 20px 10px;
@@ -660,7 +714,7 @@ audio:hover {
 .galeria .titulo {
   text-align: center;
   font-size: 9rem;
-  color: #ff9700;
+  color: #ccd5ae;
   margin: 80px auto;
 }
 .galeria .grid-gallery {
@@ -706,7 +760,12 @@ audio:hover {
   }
 }
 
-@media only screen and (max-width: 600px) {
+.form {
+  width: 100%;
+  height: 50vh;
+}
+
+@media only screen and (max-width: 768px) {
   audio {
     width: 110px;
     opacity: 0.1;
@@ -728,7 +787,7 @@ audio:hover {
   .header {
     width: 100vw;
     background-image: url("../../assets/img/header_mobile.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
@@ -765,21 +824,7 @@ audio:hover {
   }
   .main .box-counter {
     width: 100%;
-    margin: auto;
     overflow: hidden;
-  }
-  .main .box-counter p {
-    font-size: 6rem;
-    margin: 20px auto;
-    text-align: center;
-    background: red;
-    width: 80px;
-    align-items: center;
-    border: none;
-    border-radius: 10px;
-    background: radial-gradient(ellipse farthest-side at 76% 77%, rgba(245, 228, 212, 0.25) 4%, rgba(255, 255, 255, 0) calc(4% + 1px)), radial-gradient(circle at 76% 40%, #fef6ec 4%, rgba(255, 255, 255, 0) 4.18%), linear-gradient(135deg, #ff0000 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgba(98, 149, 144, 0.5) 100%), linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%);
-    background-blend-mode: normal, normal, screen, overlay, normal;
-    box-shadow: 0px 0px 10px 1px #000000;
   }
   .main .box-counter p span {
     font-size: 2rem;
@@ -873,14 +918,14 @@ audio:hover {
     margin: 10px;
   }
   .iglesia .div .capa_1 path {
-    fill: #faa972;
+    fill: #faedcd;
   }
   .iglesia .div .capa_3 {
     width: 350px;
     margin: 10px;
   }
   .iglesia .div .capa_3 path {
-    fill: #ff7417;
+    fill: #ccd5ae;
   }
   .evento {
     width: 100%;
