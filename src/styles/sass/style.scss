@@ -343,12 +343,11 @@ audio {
         justify-content: center;
         gap: 20px;
         width: 85%;
-        margin: auto;
         margin: 20px auto;
         p {
             display: flex;
             flex-direction: column;
-            width: 250px;
+            width: 200px;
             clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 20px) 100%, 0 100%);
             font-size: 6rem;
             align-items: center;
@@ -790,10 +789,11 @@ audio {
         .box-counter {
             width: 100%;
             overflow: hidden;
-
             p {
+                font-size: 4rem;
+                width: 80px;
                 span {
-                    font-size: 2rem;
+                    font-size: 1.6rem;
                     margin: 8px auto;
                 }
             }
