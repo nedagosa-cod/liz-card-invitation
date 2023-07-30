@@ -420,6 +420,71 @@ audio:hover {
   color: #d4a373;
   margin: 20px auto;
 }
+.main .titulo-padres {
+  text-align: center;
+  font-size: 6rem;
+  color: #d4a373;
+  margin: 20px auto;
+  width: 25ch;
+}
+.main .padre-bx {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.main .padre-bx span {
+  border: 1px solid #ccd5ae;
+}
+.main .padre-bx div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.main .padre-bx div:nth-child(2) {
+  border: 1px solid #ccd5ae;
+}
+.main .padre-bx div p {
+  font-size: 3.4rem;
+}
+.main .palabras {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+}
+.main .palabras .segmento {
+  font-size: 2rem;
+  font-family: "Rancho", cursive;
+  text-align: center;
+  padding: 10px;
+  width: 50%;
+}
+.main .palabras .segmento h3 {
+  font-size: 4rem;
+  margin: 4px auto;
+}
+.main .palabras .segmento h4 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+.main .palabras .segmento p {
+  margin-bottom: 20px;
+}
+.main .palabras .segmento figure {
+  border: 2px solid #ccd5ae;
+  padding: 10px;
+  width: 350px;
+}
+.main .palabras .palabras__novios {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px 40px;
+}
 .main .subtitulo {
   font-family: "Rancho", cursive;
   text-align: center;
@@ -815,6 +880,70 @@ audio:hover {
   }
   .main .titulo {
     font-size: 5rem;
+  }
+  .main .titulo-padres {
+    text-align: center;
+    font-size: 4rem;
+    color: #d4a373;
+    margin: 16px auto;
+    width: 15ch;
+  }
+  .main .padre-bx {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .main .padre-bx span {
+    border: 1px solid #ccd5ae;
+  }
+  .main .padre-bx div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+  .main .padre-bx div:nth-child(2) {
+    border: 1px solid #ccd5ae;
+  }
+  .main .padre-bx div p {
+    font-size: 2rem;
+  }
+  .main .palabras {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+  }
+  .main .palabras .segmento {
+    font-size: 2rem;
+    font-family: "Rancho", cursive;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+  .main .palabras .segmento h3 {
+    font-size: 3rem;
+    margin: 4px auto;
+  }
+  .main .palabras .segmento h4 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  .main .palabras .segmento p {
+    margin-bottom: 20px;
+  }
+  .main .palabras .segmento figure {
+    border: 2px solid #ccd5ae;
+    padding: 10px;
+    width: 350px;
+  }
+  .main .palabras .palabras__novios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
   .main .subtitulo {
     font-family: "Rancho", cursive;

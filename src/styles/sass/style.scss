@@ -330,6 +330,71 @@ audio {
         color: $s-color;
         margin: 20px auto;
     }
+    .titulo-padres{
+        text-align: center;
+        font-size: 6rem;
+        color: $s-color;
+        margin: 20px auto;
+        width: 25ch;
+    }
+    .padre-bx {
+        display: flex;
+        justify-content: space-evenly;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 60px;
+        text-align: center;
+        span {
+            border: 1px solid $p-color;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            &:nth-child(2) {
+                border: 1px solid $p-color;
+            }
+            p {
+                font-size: 3.4rem;
+            }
+        }
+    }
+    .palabras {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        margin: auto;
+        .segmento {
+            font-size: 2rem;
+            font-family: $tipo-secundaria;
+            text-align: center;
+            padding: 10px;
+            width: 50%;
+            h3 {
+                font-size: 4rem;
+                margin: 4px auto;
+            }
+            h4 {
+                font-size: 2.4rem;
+                margin-bottom: 10px;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+            figure {
+                border: 2px solid $p-color;
+                padding: 10px;
+                width: 350px;
+            }
+        }
+        .palabras__novios {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 10px 40px;
+        }
+    }
 
     .subtitulo {
         font-family: $tipo-secundaria;
@@ -780,7 +845,70 @@ audio {
         .titulo {
             font-size: 5rem;
         }
-
+        .titulo-padres{
+            text-align: center;
+            font-size: 4rem;
+            color: $s-color;
+            margin: 16px auto;
+            width: 15ch;
+        }
+        .padre-bx {
+            display: flex;
+            justify-content: space-evenly;
+            width: 90%;
+            margin: auto;
+            margin-bottom: 40px;
+            span {
+                border: 1px solid $p-color;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                &:nth-child(2) {
+                    border: 1px solid $p-color;
+                }
+                p {
+                    font-size: 2rem;
+                }
+            }
+        }
+        .palabras {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 90%;
+            margin: auto;
+            .segmento {
+                font-size: 2rem;
+                font-family: $tipo-secundaria;
+                text-align: center;
+                padding: 10px;
+                width: 100%;
+                h3 {
+                    font-size: 3rem;
+                    margin: 4px auto;
+                }
+                h4 {
+                    font-size: 1.6rem;
+                    margin-bottom: 10px;
+                }
+                p {
+                    margin-bottom: 20px;
+                }
+                figure {
+                    border: 2px solid $p-color;
+                    padding: 10px;
+                    width: 350px;
+                }
+            }
+            .palabras__novios {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+        }
         .subtitulo {
             font-family: $tipo-secundaria;
             font-size: 1.6rem;
