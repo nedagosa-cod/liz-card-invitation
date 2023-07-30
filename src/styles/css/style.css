@@ -30,6 +30,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* opcional Background */
 }
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #ccd5ae;
+}
 
 /* Evitamos problemas con las imagenes */
 img,
@@ -342,6 +356,13 @@ svg {
   }
 }
 
+body.modal {
+  overflow: hidden;
+}
+body.modal .entrada {
+  display: flex;
+}
+
 audio {
   position: fixed;
   opacity: 0.3;
@@ -393,7 +414,7 @@ audio:hover {
   background: #ccd5ae;
   position: absolute;
   font-size: 3rem;
-  font-family: "Rancho", cursive;
+  font-family: "Pompiere", cursive;
   top: 70%;
   left: 50%;
   transform: translateX(-50%);
@@ -458,7 +479,7 @@ audio:hover {
 }
 .main .palabras .segmento {
   font-size: 2rem;
-  font-family: "Rancho", cursive;
+  font-family: "Pompiere", cursive;
   text-align: center;
   padding: 10px;
   width: 50%;
@@ -466,10 +487,12 @@ audio:hover {
 .main .palabras .segmento h3 {
   font-size: 4rem;
   margin: 4px auto;
+  color: #d4a373;
 }
 .main .palabras .segmento h4 {
   font-size: 2.4rem;
   margin-bottom: 10px;
+  color: #faedcd;
 }
 .main .palabras .segmento p {
   margin-bottom: 20px;
@@ -485,8 +508,14 @@ audio:hover {
   justify-content: space-evenly;
   padding: 10px 40px;
 }
+.main .fechanum {
+  display: block;
+  font-size: 4rem;
+  margin: 20px auto;
+  text-align: center;
+}
 .main .subtitulo {
-  font-family: "Rancho", cursive;
+  font-family: "Pompiere", cursive;
   text-align: center;
   font-size: 2.8rem;
   margin: 20px auto;
@@ -531,7 +560,7 @@ audio:hover {
 
 .iglesia {
   width: 100%;
-  height: 100vh;
+  height: 900px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -544,7 +573,6 @@ audio:hover {
   flex-direction: column;
   flex-wrap: wrap;
   width: 800px;
-  height: 600px;
 }
 .iglesia__content .bx-top {
   position: relative;
@@ -571,6 +599,7 @@ audio:hover {
 }
 .iglesia__content .bx-top__a h1 {
   margin: 6px auto;
+  color: #d4a373;
 }
 .iglesia__content .bx-top__a figure {
   width: 86%;
@@ -595,7 +624,7 @@ audio:hover {
   height: auto;
 }
 .iglesia__content .bx-top__b div:nth-child(2) a {
-  font-family: "Rancho", cursive;
+  font-family: "Pompiere", cursive;
   margin: 0 auto 18px auto;
   background: #faedcd;
   padding: 8px 12px;
@@ -617,7 +646,7 @@ audio:hover {
   background: #faedcd;
   text-align: center;
   font-size: 3rem;
-  font-family: "Rancho", cursive;
+  font-family: "Pompiere", cursive;
 }
 .iglesia__content .bx-bot hr {
   width: 50%;
@@ -632,6 +661,10 @@ audio:hover {
 }
 .iglesia__content .bx-bot p {
   font-size: 2.2rem;
+}
+.iglesia__content .bx-bot figure {
+  margin: 10px auto;
+  width: 20%;
 }
 .iglesia .div {
   position: absolute;
@@ -666,7 +699,7 @@ audio:hover {
 .evento .card {
   position: relative;
   width: 60%;
-  height: 520px;
+  height: 730px;
   color: #2e2d31;
   background: #fff;
   overflow: hidden;
@@ -705,8 +738,12 @@ audio:hover {
   transform: translateY(150px);
   transition: transform 0.25s;
   transform: translateY(0);
-  font-family: "Rancho", cursive;
+  font-family: "Pompiere", cursive;
   box-shadow: 0 -2px 4px 2px rgba(0, 0, 0, 0.5);
+}
+.evento .card_content__figure {
+  margin: 10px auto;
+  width: 20%;
 }
 .evento .card_content::before {
   content: "";
@@ -742,7 +779,7 @@ audio:hover {
   margin: 60px auto;
   padding: 8px 16px;
   background: #d4a373;
-  font-family: "Rancho", cursive;
+  font-family: "Pompiere", cursive;
   font-size: 4rem;
   text-align: center;
 }
@@ -753,7 +790,21 @@ audio:hover {
   font-size: 4rem;
   text-align: center;
   padding: 20px 10px;
-  font-family: "Rancho", cursive;
+  font-family: "Pompiere", cursive;
+}
+.bebes .sobres {
+  width: 100%;
+  margin: 40px auto;
+}
+.bebes .sobres figure {
+  filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.5));
+  width: 50%;
+  margin: auto;
+  -webkit-filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+.bebes__dress {
+  width: 50%;
+  margin: auto;
 }
 .bebes span {
   display: block;
@@ -778,7 +829,7 @@ audio:hover {
 .galeria .titulo {
   text-align: center;
   font-size: 9rem;
-  color: #ccd5ae;
+  color: #d4a373;
   margin: 80px auto;
 }
 .galeria .grid-gallery {
@@ -829,6 +880,70 @@ audio:hover {
   height: 50vh;
 }
 
+.footer {
+  width: 100%;
+  height: 200px;
+  background: #ccd5ae;
+  display: flex;
+}
+.footer .mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 3rem;
+  width: 50%;
+}
+.footer .mid:nth-child(1) {
+  font-size: 5rem;
+  text-align: center;
+}
+.footer .mid:nth-child(2) {
+  font-family: "Pompiere", cursive;
+  font-size: 2.6rem;
+  letter-spacing: 1.2px;
+}
+
+.entrada {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  font-size: 4rem;
+  padding: 10px 30px;
+  top: 0;
+  left: 0;
+  background: rgba(46, 77, 67, 0.938);
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+.entrada h2 {
+  font-size: 6rem;
+  color: #ccd5ae;
+}
+.entrada h3 {
+  margin: 20px;
+}
+.entrada div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.entrada div button {
+  cursor: pointer;
+  font-size: 3rem;
+  padding: 8px 16px;
+  width: 250px;
+  background: #d4a373;
+}
+.entrada div button:hover {
+  color: #faedcd;
+}
+
 @media only screen and (max-width: 768px) {
   audio {
     width: 110px;
@@ -849,7 +964,7 @@ audio:hover {
     overflow-x: none;
   }
   .scrolldown {
-    bottom: 12%;
+    bottom: 16%;
   }
   .header {
     width: 100vw;
@@ -919,7 +1034,7 @@ audio:hover {
   }
   .main .palabras .segmento {
     font-size: 2rem;
-    font-family: "Rancho", cursive;
+    font-family: "Pompiere", cursive;
     text-align: center;
     padding: 10px;
     width: 100%;
@@ -946,7 +1061,7 @@ audio:hover {
     justify-content: space-evenly;
   }
   .main .subtitulo {
-    font-family: "Rancho", cursive;
+    font-family: "Pompiere", cursive;
     font-size: 1.6rem;
     width: 90%;
   }
@@ -957,6 +1072,8 @@ audio:hover {
     width: 100%;
     overflow: hidden;
     border: none;
+    margin: 0 auto;
+    padding: 16px 10px;
   }
   .main .box-counter p {
     font-size: 4rem;
@@ -1074,7 +1191,22 @@ audio:hover {
   }
   .evento .card {
     width: 90%;
-    height: 390px;
+    height: 500px;
+    margin-top: 10px;
+  }
+  .bebes__dress {
+    width: 80%;
+    margin: auto;
+  }
+  .bebes .sobres {
+    width: 100%;
+    margin: 10px auto;
+  }
+  .bebes .sobres figure {
+    filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.5));
+    width: 80%;
+    margin: auto;
+    -webkit-filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.5));
   }
   .bebes h2 {
     font-size: 2.8rem;
@@ -1094,8 +1226,66 @@ audio:hover {
     font-size: 2rem;
   }
   .galeria .titulo {
+    width: 90%;
+    font-size: 5rem;
+  }
+  .form {
     width: 80%;
-    font-size: 6rem;
+    height: 50vh;
+    margin: auto;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  .footer .mid:nth-child(1) {
+    font-size: 2.6rem;
+  }
+  .footer .mid:nth-child(2) {
+    font-size: 1.8rem;
+  }
+  .entrada {
+    display: none;
+    position: fixed;
+    overflow: hidden;
+    font-size: 4rem;
+    padding: 10px 30px;
+    background: rgba(46, 77, 67, 0.966);
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    transition: ease 0.5s;
+    -webkit-transition: ease 0.5s;
+    -moz-transition: ease 0.5s;
+    -ms-transition: ease 0.5s;
+    -o-transition: ease 0.5s;
+  }
+  .entrada h2 {
+    font-size: 4rem;
+    color: #ccd5ae;
+  }
+  .entrada h3 {
+    font-size: 3rem;
+    margin: 20px;
+  }
+  .entrada div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .entrada div button {
+    font-size: 2rem;
+    width: 250px;
+    background: #d4a373;
+    padding: 8px 16px;
   }
   @keyframes hidebar {
     0% {

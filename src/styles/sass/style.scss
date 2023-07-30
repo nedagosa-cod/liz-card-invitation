@@ -219,7 +219,14 @@
       }
   }
   
-
+body {
+    &.modal{
+        overflow: hidden;
+    }
+    &.modal .entrada {
+        display: flex;
+    }
+}
 
 audio {
     position: fixed;
@@ -374,10 +381,12 @@ audio {
             h3 {
                 font-size: 4rem;
                 margin: 4px auto;
+                color: $s-color;
             }
             h4 {
                 font-size: 2.4rem;
                 margin-bottom: 10px;
+                color: $s2-color;
             }
             p {
                 margin-bottom: 20px;
@@ -395,7 +404,12 @@ audio {
             padding: 10px 40px;
         }
     }
-
+    .fechanum {
+        display: block;
+        font-size: 4rem;
+        margin: 20px auto;
+        text-align: center;
+    }
     .subtitulo {
         font-family: $tipo-secundaria;
         text-align: center;
@@ -445,7 +459,7 @@ audio {
 
 .iglesia {
     width: 100%;
-    height: 100vh;
+    height: 900px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -458,8 +472,6 @@ audio {
         flex-direction: column;
         flex-wrap: wrap;
         width: 800px;
-        height: 600px;
-
         .bx-top {
             position: relative;
             display: flex;
@@ -484,6 +496,7 @@ audio {
 
                 h1 {
                     margin: 6px auto;
+                    color: $s-color;
                 }
 
                 figure {
@@ -562,7 +575,10 @@ audio {
             p {
                 font-size: 2.2rem;
             }
-
+            figure {
+                margin: 10px auto;
+                width: 20%;
+            }
         }
     }
 
@@ -607,7 +623,7 @@ audio {
     .card {
         position: relative;
         width: 60%;
-        height: 520px;
+        height: 730px;
         color: #2e2d31;
         background: $w-color;
         overflow: hidden;
@@ -651,6 +667,10 @@ audio {
         transform: translateY(0);
         font-family: $tipo-secundaria;
         box-shadow: 0 -2px 4px 2px rgba(0, 0, 0, .5);
+        &__figure {
+            margin: 10px auto;
+            width: 20%;
+        }
     }
 
     .card_content::before {
@@ -704,6 +724,20 @@ audio {
     text-align: center;
     padding: 20px 10px;
     font-family: $tipo-secundaria;
+    .sobres {
+        width: 100%;
+        margin: 40px auto;
+        figure {
+            filter: drop-shadow(-2px 2px 2px rgba(0,0,0,.5 ));
+            width: 50%;
+            margin: auto;
+            -webkit-filter: drop-shadow(-2px 2px 2px rgba(0,0,0,.5 ));
+        }
+    }
+    &__dress {
+        width: 50%;
+        margin: auto;
+    }
     span {
         display: block;
         margin: 12px auto;
@@ -726,7 +760,7 @@ audio {
     .titulo {
         text-align: center;
         font-size: 9rem;
-        color: $p-color;
+        color: $s-color;
         margin: 80px auto;
     }
     .grid-gallery {
@@ -787,8 +821,70 @@ audio {
     height: 50vh;
 }
 
+.footer {
+    width: 100%;
+    height: 200px;
+    background: $p-color;
+    display: flex;
+    .mid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 3rem;
+        width: 50%;
+        &:nth-child(1) {
+            font-size: 5rem;
+            text-align: center;
+        }
+        &:nth-child(2) {
+            font-family: $tipo-secundaria;
+            font-size: 2.6rem;
+            letter-spacing: 1.2px;
+        }
+    }
+}
 
 
+.entrada {
+    display: none;
+    position: fixed;
+    overflow: hidden ;
+    font-size: 4rem;
+    padding: 10px 30px;
+    top: 0;
+    left: 0;
+    background: rgba(46, 77, 67, 0.938);
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    h2 {
+        font-size: 6rem;
+        color: $p-color;
+    }
+    h3 {
+        margin: 20px;
+    }
+    div {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        button {
+            cursor: pointer;
+            font-size: 3rem;
+            padding: 8px 16px;
+            width: 250px;
+            background: $s-color;
+            &:hover {
+                color: $s2-color
+            }
+        }
+    }
+}
 
 
 @media only screen and (max-width: 768px) {
@@ -811,7 +907,7 @@ audio {
         overflow-x: none;
     }
     .scrolldown {
-        bottom: 12%;
+        bottom: 16%;
     }
     .header {
         width: 100vw;
@@ -923,6 +1019,8 @@ audio {
             width: 100%;
             overflow: hidden;
             border: none;
+            margin: 0 auto;
+            padding: 16px 10px;
             p {
                 font-size: 4rem;
                 width: 80px;
@@ -1060,10 +1158,25 @@ audio {
         }
         .card {
             width: 90%;
-            height: 390px;
+            height: 500px;
+            margin-top: 10px;
         }
     }
     .bebes {
+        &__dress {
+            width: 80%;
+            margin: auto;
+        }
+        .sobres {
+            width: 100%;
+            margin: 10px auto;
+            figure {
+                filter: drop-shadow(-2px 2px 2px rgba(0,0,0,.5 ));
+                width: 80%;
+                margin: auto;
+                -webkit-filter: drop-shadow(-2px 2px 2px rgba(0,0,0,.5 ));
+            }
+        }
         h2 {
             font-size: 2.8rem;
         }
@@ -1084,10 +1197,75 @@ audio {
     }
     .galeria {
         .titulo {
-            width: 80%;
-            font-size: 6rem;
+            width: 90%;
+            font-size: 5rem;
         }
     }
+    .form {
+        width: 80%;
+        height: 50vh;
+        margin: auto;
+    }
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        .mid {
+
+            &:nth-child(1) {
+                font-size: 2.6rem;
+            }
+            &:nth-child(2) {
+                font-size: 1.8rem;
+
+            }
+        }
+    }
+    .entrada {
+        display: none;
+        position: fixed;
+        overflow: hidden ;
+        font-size: 4rem;
+        padding: 10px 30px;
+        // top: -10px;
+        // left: 0;
+        background: rgba(46, 77, 67, 0.966);
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #fff;
+        transition: ease .5s;
+        -webkit-transition: ease .5s;
+        -moz-transition: ease .5s;
+        -ms-transition: ease .5s;
+        -o-transition: ease .5s;
+        h2{
+            font-size: 4rem;
+            color: $p-color;
+        }
+        h3 {
+            font-size: 3rem;
+            margin: 20px;
+        }
+        div {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            button {
+                font-size: 2rem;
+                width: 250px;
+                background: $s-color;
+                padding: 8px 16px;
+            }
+        }
+    }
+
     @keyframes hidebar {
         0% {opacity: 1;}
         100% {opacity: 0;}
