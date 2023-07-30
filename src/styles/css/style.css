@@ -283,7 +283,7 @@ svg {
   width: 6px;
   height: 6px;
   margin-left: -3px;
-  background-color: var(--color);
+  background-color: #ccd5ae;
   border-radius: 100%;
   animation: scrolldown-anim 2s infinite;
   box-sizing: border-box;
@@ -308,15 +308,12 @@ svg {
   height: 10px;
   transform: rotate(45deg);
 }
-
-.chevrondown:nth-child(odd) {
+.scrolldown .chevrondown:nth-child(odd) {
   animation: pulse54012 500ms ease infinite alternate;
 }
-
-.chevrondown:nth-child(even) {
+.scrolldown .chevrondown:nth-child(even) {
   animation: pulse54012 500ms ease infinite alternate 250ms;
 }
-
 @keyframes scrolldown-anim {
   0% {
     opacity: 0;
@@ -344,6 +341,7 @@ svg {
     opacity: 0.5;
   }
 }
+
 audio {
   position: fixed;
   opacity: 0.3;
@@ -435,6 +433,8 @@ audio:hover {
   gap: 20px;
   width: 85%;
   margin: 20px auto;
+  border-bottom: 2px solid #ccd5ae;
+  padding: 30px 10px;
 }
 .main .box-counter p {
   display: flex;
@@ -783,6 +783,9 @@ audio:hover {
     border: none;
     overflow-x: none;
   }
+  .scrolldown {
+    bottom: 12%;
+  }
   .header {
     width: 100vw;
     background-image: url("../../assets/img/header_mobile.jpg");
@@ -824,10 +827,12 @@ audio:hover {
   .main .box-counter {
     width: 100%;
     overflow: hidden;
+    border: none;
   }
   .main .box-counter p {
     font-size: 4rem;
     width: 80px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
   }
   .main .box-counter p span {
     font-size: 1.6rem;
