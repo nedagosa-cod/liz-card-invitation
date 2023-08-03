@@ -108,7 +108,7 @@ lightbox.option({
   });
 
   const audio = document.getElementById('audio');
-  audio.volume = 0.3
+  audio.volume = 0.4
 //   audio.play()
 
 
