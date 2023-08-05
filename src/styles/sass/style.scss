@@ -822,24 +822,37 @@ audio {
 }
 
 .footer {
-    width: 100%;
-    height: 200px;
     background: $p-color;
-    display: flex;
-    .mid {
+    padding: 16px;
+    .top {
         display: flex;
-        flex-direction: column;
+        align-items: center;
         justify-content: center;
+        gap: 6px;
         font-size: 3rem;
-        width: 50%;
-        &:nth-child(1) {
-            font-size: 5rem;
-            text-align: center;
+        font-family: $tipo-secundaria;
+        padding: 10px;
+        &__fig-1 {
+            width: 30px;
+            filter: drop-shadow(0 0 2px rgba(0,0,0, .5));
+            -webkit-filter: drop-shadow(0 0 2px rgba(0,0,0, .5));
         }
-        &:nth-child(2) {
-            font-family: $tipo-secundaria;
-            font-size: 2.6rem;
-            letter-spacing: 1.2px;
+        &__fig-2 {
+            width: 120px;
+            margin: 0 12px;
+        }
+    }
+    .bot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 3rem;
+        font-family: $tipo-secundaria;
+        a {
+            color: #0b8600;
+            margin: 10px auto;
         }
     }
 }
@@ -1217,18 +1230,37 @@ audio {
         margin: auto;
     }
     .footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 300px;
-        .mid {
-
-            &:nth-child(1) {
-                font-size: 2.6rem;
+        background: $p-color;
+        padding: 16px;
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-size: 3rem;
+            font-family: $tipo-secundaria;
+            padding: 10px;
+            &__fig-1 {
+                width: 30px;
+                filter: drop-shadow(0 0 2px rgba(0,0,0, .5));
+                -webkit-filter: drop-shadow(0 0 2px rgba(0,0,0, .5));
             }
-            &:nth-child(2) {
-                font-size: 1.8rem;
-
+            &__fig-2 {
+                width: 120px;
+                margin: 0 12px;
+            }
+        }
+        .bot {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 3rem;
+            font-family: $tipo-secundaria;
+            a {
+                color: #0b8600;
+                margin: 10px auto;
             }
         }
     }
