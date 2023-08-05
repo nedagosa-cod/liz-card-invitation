@@ -1,5 +1,5 @@
 const playMusic = () => {
     audio.play()
-    document.querySelector(".modal").scrollIntoView();
+    window.scrollTo(0, 0);
     document.querySelector('.modal').className = ''
 }
