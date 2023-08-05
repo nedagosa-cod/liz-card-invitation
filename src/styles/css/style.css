@@ -948,6 +948,10 @@ audio:hover {
 }
 
 @media only screen and (max-width: 768px) {
+  body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
   body::-webkit-scrollbar {
     display: none;
   }
