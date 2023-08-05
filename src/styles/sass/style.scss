@@ -891,6 +891,12 @@ audio {
 
 
 @media only screen and (max-width: 768px) {
+    body {
+        &::-webkit-scrollbar
+        {
+            display: none;
+        }
+    }
     audio {
         width: 110px;
         opacity: .1;
