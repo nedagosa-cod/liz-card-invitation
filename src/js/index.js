@@ -18,12 +18,11 @@ function createAnimation(element) {
         y:0,
         duration: 0.5,
     })
-  }
+}
 
-  
+
 const elements = document.querySelectorAll(".anim");
 elements.forEach((element) => createAnimation(element));
-
 
 
 
